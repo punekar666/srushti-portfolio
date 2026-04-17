@@ -1,0 +1,197 @@
+.hero {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 80px 0 40px 0;
+  overflow-x: hidden;
+  position: relative;
+  background: #e9e3df;
+}
+
+/* Background Text - Centered Pivot */
+.hero-bg-text-container {
+  position: absolute;
+  top: 18vh;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-bg-text {
+  font-family: var(--font-display);
+  font-size: 8vw;
+  font-weight: 850;
+  color: #000;
+  /* Restored solid black */
+  letter-spacing: -0.01em;
+  margin: 0;
+  line-height: 1;
+  white-space: nowrap;
+  user-select: none;
+  width: auto;
+}
+
+.hero-bottom-section {
+  display: grid;
+  grid-template-columns: 1fr 380px 1fr;
+  /* Balanced Center Pillar */
+  align-items: center;
+  width: 90%;
+  max-width: 1500px;
+  height: auto;
+  margin: 15vh auto 0 auto;
+  /* Subtle Kiss Overlap */
+  position: relative;
+  z-index: 10;
+}
+
+/* Middle Column: Hero Portrait (Refined Scale) */
+.hero-center-column {
+  position: relative;
+  width: 380px;
+  height: 380px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-avatar-wrapper {
+  position: relative;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+}
+
+/* Left Column: Deck of Cards */
+.hero-left-column {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  height: 320px;
+  padding-bottom: 10px;
+}
+
+/* Tactile Interactive Deck Fan */
+.hero-sketch-cards {
+  position: relative;
+  width: 70px;
+  height: 100px;
+  margin-left: 80px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.sketch-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-origin: bottom center;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.sketch-card.card-1 {
+  transform: rotate(-15deg) translateX(-8px);
+  z-index: 1;
+}
+
+.sketch-card.card-2 {
+  transform: rotate(-5deg);
+  z-index: 2;
+}
+
+.sketch-card.card-3 {
+  transform: rotate(10deg) translateX(8px);
+  z-index: 3;
+}
+
+.sketch-logo {
+  width: 45%;
+  height: 45%;
+  object-fit: contain;
+}
+
+/* Discreet Safe-Zone Fan Spread */
+.hero-sketch-cards:hover .sketch-card.card-1 {
+  transform: rotate(-30deg) translateX(-55px) translateY(-5px) scale(1.05);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+}
+
+.hero-sketch-cards:hover .sketch-card.card-2 {
+  transform: rotate(-5deg) translateY(-25px) scale(1.1);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+  z-index: 5;
+}
+
+.hero-sketch-cards:hover .sketch-card.card-3 {
+  transform: rotate(20deg) translateX(55px) translateY(-5px) scale(1.05);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Right Column: Editorial Typography */
+.hero-right-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 320px;
+}
+
+.hero-text-box {
+  max-width: 400px;
+  padding-left: 50px;
+  /* More breathing room */
+}
+
+.hero-text-box h2 {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: #000;
+  font-weight: 850;
+  letter-spacing: -0.01em;
+}
+
+.hero-text-box p {
+  font-family: var(--font-sans);
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #222;
+  font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+  .hero-bottom-section {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-top: 100px;
+  }
+}
