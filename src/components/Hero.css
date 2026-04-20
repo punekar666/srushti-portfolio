@@ -67,19 +67,22 @@
   width: 380px;
   height: 380px;
   border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: #ffffff;
+  /* Creates a solid white circle */
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  /* Added a slight border around the circle */
+  overflow: hidden;
+  /* Ensures the circle shape is kept perfectly round */
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
 }
 
 .hero-avatar {
   width: 100%;
   height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+  object-fit: contain;
+  /* Prevents the image from zooming in, keeping the full head visible */
+  object-position: center bottom;
+  /* Anchors the photo to the bottom of the circle */
 }
 
 /* Left Column: Deck of Cards */

@@ -52,16 +52,14 @@ const About = () => {
           {/* Left Column */}
           <div className="about-column-left">
             <motion.div
-              className="about-card avatar-card glass-box"
+              className="avatar-standalone"
               style={{ y: yAvatar, opacity }}
             >
-              <div className="status-badge">
+              <div className="status-badge-standalone">
                 <span className="pulse"></span>
                 AVAILABLE FOR WORK
               </div>
-              <div className="avatar-frame">
-                <img src="/avatar.png" alt="Srushti Punekar" className="avatar-img" />
-              </div>
+              <img src="/avatar 2.png" alt="Srushti Punekar" className="avatar-img-standalone" />
             </motion.div>
 
             <motion.div
@@ -139,6 +137,7 @@ const About = () => {
                   className="social-link"
                   target="_blank"
                   rel="noreferrer"
+
                 >
                   <div className="social-icon-box glass-box">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Gmail" />
@@ -158,11 +157,11 @@ const About = () => {
                 </a>
               </div>
 
-              <button className="shimmer-btn">
+              <a href="/resume.pdf" target="_blank" rel="noreferrer" className="shimmer-btn" style={{ textDecoration: 'none' }}>
                 <span className="shimmer-effect"></span>
                 <span className="btn-label">GET RESUME</span>
                 <span className="btn-icon">→</span>
-              </button>
+              </a>
             </motion.div>
           </div> {/* End of about-column-right */}
         </div> {/* End of about-grid */}

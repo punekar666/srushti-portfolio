@@ -59,35 +59,32 @@
 }
 
 /* --- Left Column Elements --- */
-.avatar-card {
-  height: 150px;
+.avatar-standalone {
+  position: relative;
+  width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end; 
+  margin-top: -60px; /* Pulls the head up, bringing the quote card into alignment! */
+  margin-bottom: -15px; /* Sit perfectly flush on the quote card */
+  z-index: 5; 
 }
 
-.avatar-frame {
-  height: 110px;
-  width: 110px;
-  border-radius: 20px;
-  overflow: hidden;
-  background: #fff;
-}
-
-.status-badge {
+.status-badge-standalone {
   position: absolute;
-  top: 15px;
-  right: 15px;
+  top: 25px; /* Moves it higher up, away from the face */
+  left: -15px; /* Floats elegantly on the left side where there is more empty space */
   background: #fff;
-  padding: 4px 12px;
+  padding: 6px 14px;
   border-radius: 20px;
   font-family: var(--font-sans);
-  font-size: 0.6rem;
+  font-size: 0.65rem;
   font-weight: 850;
   display: flex;
   align-items: center;
-  gap: 6px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  gap: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  z-index: 10;
 }
 
 .pulse {
@@ -109,16 +106,17 @@
 }
 
 @keyframes pulse-ring {
-  0% {
-    transform: scale(0.33);
-    opacity: 1;
-  }
+  0% { transform: scale(0.33); opacity: 1; }
+  80%, 100% { opacity: 0; transform: scale(3); }
+}
 
-  80%,
-  100% {
-    opacity: 0;
-    transform: scale(3);
-  }
+.avatar-img-standalone {
+  max-height: 260px; /* Limits how tall it can get */
+  max-width: 90%; /* Prevents it from getting too wide */
+  width: auto;
+  height: auto;
+  object-fit: contain; /* Shows the WHOLE image without cropping */
+  display: block; 
 }
 
 .quote-card {
@@ -151,7 +149,7 @@
   flex-direction: column;
   justify-content: space-between;
   gap: 12px;
-  flex-grow: 1;
+  flex: 1; /* Forces the card to stretch and perfectly align with the bottom of the right column */
 }
 
 .sect-block h3 {
