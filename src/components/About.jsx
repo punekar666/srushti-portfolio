@@ -133,7 +133,7 @@ const About = () => {
               <div className="social-group">
                 {/* GMAIL LINK */}
                 <a
-                  href="mailto:your.email@gmail.com"
+                  href="mailto:srushtipunekar@gmail.com"
                   className="social-link"
                   target="_blank"
                   rel="noreferrer"
@@ -146,7 +146,7 @@ const About = () => {
 
                 {/* LINKEDIN LINK */}
                 <a
-                  href="https://linkedin.com/in/yourprofile"
+                  href="https://www.linkedin.com/in/srushti-punekar-020294257/"
                   className="social-link"
                   target="_blank"
                   rel="noreferrer"
