@@ -34,7 +34,7 @@ const About = () => {
     {
       company: 'Thynktech India',
       role: 'UI/UX Design Intern',
-      date: 'Current',
+      date: 'Sept 2025 – April 2026',
       icon: '/Thynk%20tech%20logo.jpg'
     }
   ];
